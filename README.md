@@ -11,9 +11,9 @@ Dada una imagen que contanga un rostro de entrada, la red neuronal sera capaz de
 * Google Drive
 * OpenCV (posiblemente)
 
-Puede ser que durante el proces de desarrollo requiera de alguno mas, o termine sin usar alguno de ellos.
+Puede ser que durante el proceso de desarrollo requiera de alguna tecnologia mas, o termine sin usar alguna de ellas.
 
 ### Extra
-Paralelamente tambien estare realizando una red neuronal que dada una imagen de un arma de entra, la red sea capaz de decir a que categoria pertenece el arma (fusil de asalto, francotirador, pistola, escopeta,etc).
+Paralelamente tambien estare realizando una red neuronal que dada una imagen de un arma de entrada, la red sea capaz de decir a que categoria pertenece el arma (fusil de asalto, francotirador, pistola, escopeta,etc).
 Si logro acabar esta segunda red, esta sera el proyecto que presentare, caso contrario presentare la primera.
 Esta segunda red se llamara: Clasificador de armas (CDA) 
