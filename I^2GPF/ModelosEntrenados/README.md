@@ -15,24 +15,31 @@ Los resultados de cada red, como sus caracteristicas los muestro en la sigueinte
 |  Modelo 6 |    25     |    75     |   80   |        30        |   Segunda  |   98.87     |  
 |  Modelo 7 |    10     |    75     |   80   |        30        |   Segunda  |   97.43     |  
 |  Modelo 8 |    5      |    75     |   80   |        30        |   Segunda  |   97.00     |
+|  ModeloV2 |    25     |    75     |   60   |        15        |   Segunda  |   98.93     |
+| Modelo1V2 |    15     |    125    |   40   |        10        |   Segunda  |   98.43     |
+| Modelo2V2 |    15     |    75     |   60   |        15        |   Tercera1 |   98.66     |
+| Modelo3V2 |    15     |    75     |   60   |        15        |   Tercera2 |   99.64     |
 
 ## Primera estructura
 La primera estructura cosnsistia de una red que comenzaba con una capa convolucional con 8 filtros, seguida de una capa de MaxPooling 2x2 y un Dropout de 20%. Este formato de convolucional, pooling se repitia 4 veces solo variando el numero de filtros (16,32 y 64). Para finalmente tener una capa densa con 512 neuronas, y una capa con funcion de activacion SoftMax para poder calsificar los resultados que contendra solo 2 neuronas.
 
 ![Captura](Estructura1.png "Captura")
 
-## Primera estructura
+## Segunda estructura
 La segunda estructura solo elimina la primera capa convolucional, la que contenia 8 filtros. y Mueve el dropout de justo despues de la capa convolucional que contiene 16 filtros, que ahora es la primera de la red.
 
 ![Captura](Estructura2.png "Captura")
 
-## Resultados 
-* La mejor estructura resulto ser la segunda, esto es posiblemente a que la primera estructura reducia demasiado el tamaño de la imagen al aplicar tantos filtros. 
-* Con 80 pasos la red mostro mejores resultados que 20.
-* El batch size que mostraba mejores resultados era de 75, ya que al aplicar 125 el modelo mostro menos prescision que todos los demas. 
-* El numero de epocas que mejores resultados mostraba era cercano a los 20.
-* El modelo que mas precision mostro fue el modelo 6. Este modelo es que aplica los cambios que mejores resultados mostraron. Las redes posteriores a esta fueron solo para veriricar si se podia encontrar mejores parametros, pero no mostraron mejores resultados.
+## Tercera estructura
+En la primera version de esta estructura se reduce la cantidad de filtros en las cpas convolucionales y el numero de neuronas de la ultima capa densa a la mitad. En la segunda version de esta estructura se duplica el numero de filtros y neuronas.
+
+![Captura](Estructura3.png "Captura")
+
+## Diferencias entre los modelos v1 y v2
+La diferencia entre ambos modelos es que los modelos de la version 1 fueron entrenados con el primer dataset, mientras que los modelos v2 fueron entrandos con la segunda version del dataset. El porque de dos dataset se explica en el directorio de los datasets.
+
+## Mejor modelo
+El mejor modelo fue el "modelo 6", era el que mostraba mas precision tanto en los datos, como en las pruebas manuales. Al ser la estructura que mejores resultados mostraba, entrene esta misma estructura pero con el nuevo dataset; el nuevo modelo originado fue mejor que el anterior al mostrar aun mas precision al usar un dataset mejorado. Es debido a esto que el modelo usado para la prueba en vivo es este. 
 
 ## Notas
-El modelo que se usa para las pruebas es el modelo 6 al ser el que mejores resultados mostro.
 Cabe aclarar que estos no fueron los unicos modelos que cree. Cree mas de 30 modelos diferentes, variando parametros y la estructura de la red. Aca solo puse los modelos mas significativos, y que mostraban cierto progreso. Los modelos que fueron descartados fue porque tenian una precision demasiado baja o no representaban un cambio representativo para ser colocado en la tabla.
