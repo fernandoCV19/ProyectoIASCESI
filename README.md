@@ -9,11 +9,15 @@ Dada una imagen que contanga un rostro de entrada, la red neuronal sera capaz de
 * Keras
 * Google Colab
 * Google Drive
-* OpenCV (posiblemente)
+* OpenCV 
+* Haarcascade
 
-Puede ser que durante el proceso de desarrollo requiera de alguna tecnologia mas, o termine sin usar alguna de ellas.
-
-### Extra
-Paralelamente tambien estare realizando una red neuronal que dada una imagen de un arma de entrada, la red sea capaz de decir a que categoria pertenece el arma (fusil de asalto, francotirador, pistola, escopeta,etc).
-Si logro acabar esta segunda red, esta sera el proyecto que presentare, caso contrario presentare la primera.
-Esta segunda red se llamara: Clasificador de armas (CDA) 
+## IMPORTANTE 
+Este repositorio contiene el proceso de creacion del proyeto, asi como varios intentos de redes neorunales, ademas del dataset utilizado en el entrenamiento de la red, los cuales incrementan en gran medida el tamaño del repositorio, Si solo deseas probar el modelo, ingresa al siguiente link: https://github.com/fernandoCV19/ProyectoIASCESI-LightVersion.git 
+El cual contiene:
+* El modelo de red neuronal que podujo mejores resultados a la hora de distinguir entre personas con barbijo y sin barbijo.
+* Solo los archivos de haarcascade necesarios para el funcionamiento con una camara en vivo para la clasificacion de personas con barbijo y sin barbijo.
+* Un programa que usa el reconocedor facial de haarcascade para clasificar los rostros.
+* Un programa que usa el detector de ojos de haarcascade para encontrar la posicion de un rostro(el por que de este codigo se explica en su porpio directorio).
+* Ambos programas cuentan con una version en un libro de jupyter lab y un ejecutable en python.
+* Codigo para realizar una clasificacion unicamente con fotos utilizando el modelo entrenado.

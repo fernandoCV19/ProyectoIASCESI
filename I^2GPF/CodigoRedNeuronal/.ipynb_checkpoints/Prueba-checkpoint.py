@@ -24,7 +24,8 @@ def predict(file):
     print ("Con barbijo")
   elif (respuesta == 1):
     print ("Sin barbijo")
-  return 0
+  
 
-#colocar direccion de memoria de la imagen
+
+#prediccion 
 predict("")
